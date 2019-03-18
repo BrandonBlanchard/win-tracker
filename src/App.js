@@ -27,8 +27,10 @@ class App extends Component {
   componentDidMount () {
     if(this.state.readiness === LOAD_STATE.INIT) {
       fetchData(dataSource, (data) => {
-        this.setState({readiness: LOAD_STATE.READY, data})
-        console.log(data)
+        this.setState({
+          readiness: LOAD_STATE.READY, 
+          data
+        })
       });
 
       this.setState({readiness: LOAD_STATE.LOADING});
