@@ -2,23 +2,44 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import {fetchData} from './classes/fetch-data';
+import PivotTableUI from 'react-pivottable/PivotTableUI';
+import 'react-pivottable/pivottable.css';
+
+const dataSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6B-jLNFVOaHlagYjsClKUDGquAkZpCymnDQ60n5wOw-0pf8gRImDXKciW7FzLZbK4rZutfQjPfVSM/pub?output=csv';
+
+const LOAD_STATE = {
+  INIT: 0,
+  LOADING: 1,
+  READY: 2
+};
+
 class App extends Component {
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      readiness: LOAD_STATE.INIT,
+      data: null
+    };
+  }
+
+  componentDidMount () {
+    if(this.state.readiness === LOAD_STATE.INIT) {
+      fetchData(dataSource, (data) => {
+        this.setState({readiness: LOAD_STATE.READY, data})
+        console.log(data)
+      });
+
+      this.setState({readiness: LOAD_STATE.LOADING});
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        { this.state.readiness === LOAD_STATE.READY && <PivotTableUI {...this.state} onChange={s => this.setState(s)}/>}
         </header>
       </div>
     );
