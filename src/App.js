@@ -39,10 +39,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="app">
+      <div className="header">Turn 2 Smoke Break Game Data</div>
         { this.state.readiness === LOAD_STATE.READY && <PivotTableUI {...this.state} onChange={s => this.setState(s)}/>}
-        </header>
       </div>
     );
   }
