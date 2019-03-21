@@ -32,7 +32,7 @@ const formatData = (data, dataReadyCB) => {
             opponentFaction: line[5],
             opponentTheme: line[6],
             opponentCaster: line[7],
-            outcome: !!line[8] ? 'win' : 'lose',
+            outcome: line[8] ? 'win' : 'lose',
             winCondition: line[9],
             controlPoints: line[10],
             opponentControlPoints: line[11]

@@ -1,17 +1,89 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Mrs+Sheppards');
+
+body {
+  background-color: #e9e4cf;
+}
+
+div, h1, h2, h3, h4, h5, h6 {
+  box-sizing: border-box;
+}
+
 .app {
-  max-width: 100%;
-  padding: 50px 20px;
+  box-sizing: border-box;
+  width: 100vw;
   min-height: 100vh;
 
-  background: url('dark-honeycomb.png');
-  background-repeat: repeat;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
 }
 
 .header {
-  width: 100%;
-  font-size: 18px;
-  color: #a4a4a4;
-  text-align: center;
-  margin: 50px 0;
+  width: 60vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  
+  background-color: #2a352f;
 
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.header > h1 {
+  font-size: 100px;
+  color: #d0c69f;
+  font-family: Mrs Sheppards;
+  letter-spacing: 3px;
+  font-weight: 500;
+
+  text-align: start;
+}
+
+.sub-header {
+  width: 40vw;
+  height: 100vh;
+}
+
+.win-rate,
+.player-faction {
+  width: 40vw;
+  min-width: 400px;
+  height: 50vh;
+}
+
+.win-rate {
+  background-color: #e9e4cf;
+}
+
+.player-faction {
+  background-color: #87ce71;
+}
+
+.content-header {
+  width: 100%;
+  padding: 30px 0;
+  font-family: Open Sans;
+  font-size: 30px;
+  color: #2a352f;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1280px;
+  max-width: 100%;
+  overflow-x: hidden;
+
+  padding: 30px 20px;
+  font-family: Open Sans;
+  font-size: 16px;
+}
+
+
+.js-plotly-plot {
+  display: block;
+  width: 100%;
+  height: 100%;
 }

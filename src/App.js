@@ -5,6 +5,10 @@ import './App.css';
 import {fetchData} from './classes/fetch-data';
 import PivotTableUI from 'react-pivottable/PivotTableUI';
 import 'react-pivottable/pivottable.css';
+import { Header } from './header';
+import { PlayerFactionChart } from './player-faction-chart';
+import { WinRate } from './win-rate';
+import {extractorFactions, extractFactions} from './classes/extractors';
 
 const dataSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6B-jLNFVOaHlagYjsClKUDGquAkZpCymnDQ60n5wOw-0pf8gRImDXKciW7FzLZbK4rZutfQjPfVSM/pub?output=csv';
 
@@ -20,7 +24,9 @@ class App extends Component {
 
     this.state = {
       readiness: LOAD_STATE.INIT,
-      data: null
+      data: null,
+      factions: [],
+      winRates: []
     };
   }
 
@@ -29,8 +35,9 @@ class App extends Component {
       fetchData(dataSource, (data) => {
         this.setState({
           readiness: LOAD_STATE.READY, 
-          data
-        })
+          data,
+          factions: extractFactions(data)
+        });
       });
 
       this.setState({readiness: LOAD_STATE.LOADING});
@@ -40,8 +47,18 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-      <div className="header">Turn 2 Smoke Break Game Data</div>
-        { this.state.readiness === LOAD_STATE.READY && <PivotTableUI {...this.state} onChange={s => this.setState(s)}/>}
+        <Header></Header>
+        <div className='sub-header'>
+        { this.state.readiness === LOAD_STATE.READY && 
+          <WinRate></WinRate> }
+        { this.state.readiness === LOAD_STATE.READY && 
+          <PlayerFactionChart data={this.state.factions} width={500} height={400} ></PlayerFactionChart>}
+        </div>
+        <div className="content">
+          <h3 className="content-header">Game Data</h3>
+
+          { this.state.readiness === LOAD_STATE.READY && <PivotTableUI {...this.state} onChange={s => this.setState(s)}/>}
+        </div>
       </div>
     );
   }
