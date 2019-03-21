@@ -5,7 +5,8 @@ const objToArray = (data) => {
         labels: Object.keys(data),
         values: Object.values(data),
         domain: { column: 0 },
-        hole: .4
+        hole: .4,   
+        textinfo: 'label+percent'
     }];
 };
 

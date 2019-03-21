@@ -52,7 +52,7 @@ class App extends Component {
         { this.state.readiness === LOAD_STATE.READY && 
           <WinRate></WinRate> }
         { this.state.readiness === LOAD_STATE.READY && 
-          <PlayerFactionChart data={this.state.factions} width={500} height={400} ></PlayerFactionChart>}
+          <PlayerFactionChart data={this.state.factions} width={550} height={450} ></PlayerFactionChart>}
         </div>
         <div className="content">
           <h3 className="content-header">Game Data</h3>
