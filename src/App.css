@@ -20,8 +20,7 @@ div, h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  width: 60vw;
-  height: 100vh;
+  width: 100%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
@@ -31,6 +30,9 @@ div, h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  justify-content: center;
+
+  min-height: 700px;
 }
 
 .header > h1 {
@@ -39,34 +41,26 @@ div, h1, h2, h3, h4, h5, h6 {
   font-family: Mrs Sheppards;
   letter-spacing: 3px;
   font-weight: 500;
-
-  text-align: start;
+  text-align: center;
+  width: 100%;
+  margin: 0;
 }
+
 
 .sub-header {
   width: 40vw;
   height: 100vh;
 }
 
-.win-rate,
-.player-faction {
-  width: 40vw;
-  height: 50vh;
-}
-
 .win-rate {
   background-color: #e9e4cf;
 }
 
-.player-faction {
-  background-color: #87ce71;
+.charts-container {
+  width: 100%;
   display: flex;
-  align-items: center;
-}
-
-.player-faction .main-svg {
-  margin-left: -15px;
-  margin-top: -25px;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
 
 .content-header {
@@ -105,6 +99,9 @@ div, h1, h2, h3, h4, h5, h6 {
     overflow-x: hidden;
   }
 
+  .win-rate {
+    display: none;
+  }
 
   .player-faction .main-svg{
     margin-left: -58px;
