@@ -8,23 +8,23 @@ self.__precacheManifest = [
     "url": "/win-tracker/static/js/runtime~main.befbb89c.js"
   },
   {
-    "revision": "c1a44c22a0e13ebea602",
-    "url": "/win-tracker/static/js/main.118d7489.chunk.js"
+    "revision": "eab2dfb490eb4fe2bcc7",
+    "url": "/win-tracker/static/js/main.595846cd.chunk.js"
   },
   {
     "revision": "7124955533dfb7d871de",
     "url": "/win-tracker/static/js/2.3fab6381.chunk.js"
   },
   {
-    "revision": "c1a44c22a0e13ebea602",
-    "url": "/win-tracker/static/css/main.c2d263e7.chunk.css"
+    "revision": "eab2dfb490eb4fe2bcc7",
+    "url": "/win-tracker/static/css/main.eda6608b.chunk.css"
   },
   {
     "revision": "7124955533dfb7d871de",
     "url": "/win-tracker/static/css/2.d6032e97.chunk.css"
   },
   {
-    "revision": "dc19b23d3f7378a1e120afa098d7c509",
+    "revision": "cf46978900883287c1a2be11f93e6b6c",
     "url": "/win-tracker/index.html"
   }
 ];
