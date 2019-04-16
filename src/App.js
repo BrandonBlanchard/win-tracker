@@ -8,7 +8,7 @@ import 'react-pivottable/pivottable.css';
 import { Header } from './header';
 import { PieChart } from './player-faction-chart';
 import { WinRate } from './win-rate';
-import { extractFactions, extractFactionWins } from './classes/extractors';
+import { extractFactions, extractFactionWins, extractPlayerWins } from './classes/extractors';
 import ChartWidget from './chart-widget';
 
 const dataSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6B-jLNFVOaHlagYjsClKUDGquAkZpCymnDQ60n5wOw-0pf8gRImDXKciW7FzLZbK4rZutfQjPfVSM/pub?output=csv';
@@ -27,7 +27,8 @@ class App extends Component {
       readiness: LOAD_STATE.INIT,
       data: null,
       factions: [],
-      factionWins: []
+      factionWins: [],
+      playerWins: []
     };
   }
 
@@ -38,7 +39,8 @@ class App extends Component {
           readiness: LOAD_STATE.READY,
           data,
           factions: extractFactions(data),
-          factionWins: extractFactionWins(data)
+          factionWins: extractFactionWins(data),
+          playerWins: extractPlayerWins(data)
         });
       });
 
@@ -54,6 +56,9 @@ class App extends Component {
         </ChartWidget>
         <ChartWidget chartName="Wins by Faction" key={1}>
           <PieChart data={this.state.factionWins} width={400} height={400} ></PieChart>
+        </ChartWidget>
+        <ChartWidget chartName="Wins by Player">
+          <PieChart data={this.state.playerWins} width={400} height={400}></PieChart>
         </ChartWidget>
       </div>
     );

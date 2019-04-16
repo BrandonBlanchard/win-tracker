@@ -14,7 +14,7 @@ const formatData = (data, dataReadyCB) => {
    // Map line values to column names 
    dataReadyCB(lines.map(ln => 
       ln.split(',').reduce((acc, val, index) => {
-         acc[colNames[index]] = val;
+         acc[colNames[index].toLowerCase()] = val;
          return acc;
       }, {})
    ));
