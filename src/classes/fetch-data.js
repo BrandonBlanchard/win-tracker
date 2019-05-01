@@ -2,7 +2,7 @@ import { stringify } from "querystring";
 
 
 const fetchData = (url, dataReadyCB) => {
-     fetch(url).then(data => {
+     return fetch(url).then(data => {
         data.text().then(data => formatData(data, dataReadyCB));
      }).catch(e => console.error('data fetch failed')) };
 
