@@ -1,10 +1,11 @@
 import React, { Component} from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 import './App.css';
 
 import { fetchData } from './classes/fetch-data';
 import 'react-pivottable/pivottable.css';
-import { Header } from './header';
+import { WelcomeMat } from './components/welcome-mat/welcome-mat';
 import { dataLoad } from './actions/index';
 import { SectionMeta } from './components/section-meta';
 
@@ -25,7 +26,6 @@ class App extends Component {
 
     this.state = {
       readiness: LOAD_STATE.INIT,
-      data: null
     };
   }
 
@@ -55,15 +55,25 @@ class App extends Component {
 
 
   render() {
+    console.log(this.props)
     return (
       <div className="app">
-        <Header></Header>
-        {this.state.readiness === LOAD_STATE.READY && this.renderOnReady()}
+        <WelcomeMat/>
+        {this.props.data.players.length > 0 && this.renderOnReady()}
       </div>
     );
   }
 }
 
+App.propTypes = {
+  data: PropTypes.objectOf(PropTypes.array)
+};
+
+App.defaultProps = {
+  data: {
+    players: []
+  }
+}
 
 const mapStateToProps = state => state;
 

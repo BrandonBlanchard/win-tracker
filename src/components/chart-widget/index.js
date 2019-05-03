@@ -1,1 +1,1 @@
-export { default as ChartWidget } from './chart-widget';
+export { default as ChartCard } from './chart-card';

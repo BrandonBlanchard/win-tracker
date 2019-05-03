@@ -13,7 +13,8 @@ const playerReducer = (acc, game) => {
         acc[game.player] = {
             games: 1,
             wins: playerDidWin ? 1 : 0,
-            player: game.player
+            player: game.player,
+            faction: game.faction
         }
     }
 
@@ -24,7 +25,8 @@ const playerReducer = (acc, game) => {
         acc[game.opponent] = {
             games: 1,
             wins: !playerDidWin ? 1 : 0,
-            player: game.opponent
+            player: game.opponent,
+            faction: game[OPPONENT_FACTION]
         }
     }
 

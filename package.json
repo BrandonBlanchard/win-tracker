@@ -29,6 +29,7 @@
   "devDependencies": {
     "lodash": "^4.17.11",
     "plotly.js": "^1.45.3",
+    "prop-types": "^15.7.2",
     "react-pivottable": "^0.9.0",
     "react-plotly.js": "^2.3.0",
     "react-redux": "^7.0.2",

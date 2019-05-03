@@ -1,0 +1,57 @@
+.welcome-mat {
+    position: relative;
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-mat:before {
+    content: ' ';
+    position: absolute;
+    
+    background-size: cover;
+
+    display: block;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+}
+
+.welcome-mat__header-1,
+.welcome-mat__header-2 {
+    position: relative;
+
+    font-family: Mrs Sheppards;
+    font-weight: 200;
+    font-size: 60px;
+    letter-spacing: 4px;
+    color: #728041;
+
+    z-index: 200;
+
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.welcome-mat__header-1 {
+
+}
+
+.welcome-mat__header-2 {
+    
+}
