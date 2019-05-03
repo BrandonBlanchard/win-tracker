@@ -1,16 +1,15 @@
 {
-  "main.css": "/win-tracker/static/css/main.eda6608b.chunk.css",
-  "main.js": "/win-tracker/static/js/main.d2973ad6.chunk.js",
-  "main.js.map": "/win-tracker/static/js/main.d2973ad6.chunk.js.map",
+  "main.css": "/win-tracker/static/css/main.027070cb.chunk.css",
+  "main.js": "/win-tracker/static/js/main.2674bf59.chunk.js",
+  "main.js.map": "/win-tracker/static/js/main.2674bf59.chunk.js.map",
   "runtime~main.js": "/win-tracker/static/js/runtime~main.befbb89c.js",
   "runtime~main.js.map": "/win-tracker/static/js/runtime~main.befbb89c.js.map",
   "static/css/2.d6032e97.chunk.css": "/win-tracker/static/css/2.d6032e97.chunk.css",
-  "static/js/2.3fab6381.chunk.js": "/win-tracker/static/js/2.3fab6381.chunk.js",
-  "static/js/2.3fab6381.chunk.js.map": "/win-tracker/static/js/2.3fab6381.chunk.js.map",
+  "static/js/2.7b1fb196.chunk.js": "/win-tracker/static/js/2.7b1fb196.chunk.js",
+  "static/js/2.7b1fb196.chunk.js.map": "/win-tracker/static/js/2.7b1fb196.chunk.js.map",
   "index.html": "/win-tracker/index.html",
-  "precache-manifest.f283235099f84c4996d7fa6884a79efa.js": "/win-tracker/precache-manifest.f283235099f84c4996d7fa6884a79efa.js",
+  "precache-manifest.43b7ce2d98558a39b15d6c8d16c76dc0.js": "/win-tracker/precache-manifest.43b7ce2d98558a39b15d6c8d16c76dc0.js",
   "service-worker.js": "/win-tracker/service-worker.js",
   "static/css/2.d6032e97.chunk.css.map": "/win-tracker/static/css/2.d6032e97.chunk.css.map",
-  "static/css/main.eda6608b.chunk.css.map": "/win-tracker/static/css/main.eda6608b.chunk.css.map",
-  "static/media/logo.svg": "/win-tracker/static/media/logo.5d5d9eef.svg"
+  "static/css/main.027070cb.chunk.css.map": "/win-tracker/static/css/main.027070cb.chunk.css.map"
 }
