@@ -1,0 +1,24 @@
+
+.players-list {
+    list-style: none;
+    width: 100%;
+    max-width: 1200px;
+
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.players-list__header {
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+    color: #728041;
+}
+
+.players-list__players {
+    width: 100%;
+    padding: 0 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+}

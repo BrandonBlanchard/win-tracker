@@ -10,29 +10,33 @@ const WIN_CONDITION = 'win condition';
 
 const playerReducer = (acc, game) => {
     const playerDidWin = game.win === "TRUE";
-    
+    console.log(game[MY_CONTROL_POINTS], game[OPPONENT_CONTROL_POINTS])
     // DRY ?
     if(has(acc, game.player)) {
         acc[game.player].games += 1;
         acc[game.player].wins += playerDidWin ? 1 : 0;
+        acc[game.player].controlPoints += parseInt(game[MY_CONTROL_POINTS]) || 0;
     } else {
         acc[game.player] = {
             games: 1,
             wins: playerDidWin ? 1 : 0,
             player: game.player,
-            faction: game.faction
+            faction: game.faction,
+            controlPoints: parseInt(game[MY_CONTROL_POINTS]) || 0
         }
     }
 
     if(has(acc, game.opponent)) {
         acc[game.opponent].games += 1;
         acc[game.opponent].wins += !playerDidWin ? 1 : 0;
+        acc[game.opponent].controlPoints += parseInt(game[OPPONENT_CONTROL_POINTS]) || 0;
     } else {
         acc[game.opponent] = {
             games: 1,
             wins: !playerDidWin ? 1 : 0,
             player: game.opponent,
-            faction: game[OPPONENT_FACTION]
+            faction: game[OPPONENT_FACTION],
+            controlPoints: parseInt(game[OPPONENT_CONTROL_POINTS]) || 0
         }
     }
 
@@ -97,10 +101,14 @@ const gamesMapper = (game) => {
 const dataLoadReducer = (prevState, action) => {
     console.log('data load reducer', prevState, action);
 
+    // Csv is parsed from line 1 to n, this means that older games show first.
+    // Reversing the list corrects it to be newest first
+    const data = action.payload.reverse();
+
     return {
-        players: [ ...Object.values(action.payload.reduce(playerReducer, {}))],
-        factions: [...Object.values(action.payload.reduce(factionReducer, {}))],
-        games: [...Object.values(action.payload.map(gamesMapper))]
+        players: [ ...Object.values(data.reduce(playerReducer, {})) ],
+        factions: [ ...Object.values(data.reduce(factionReducer, {})) ],
+        games: [ ...Object.values(data.map(gamesMapper)) ]
     }
 };
 

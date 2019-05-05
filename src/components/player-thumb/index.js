@@ -1,0 +1,1 @@
+export { PlayerThumb } from './player-thumb';

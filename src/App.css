@@ -12,6 +12,14 @@ div, h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box;
 }
 
+hr {
+  background-image: -webkit-radial-gradient(#728041, transparent 60%);
+  height: 1px;
+  width: 100%;
+  border: none;
+  margin: 10px 0;
+}
+
 .app {
   box-sizing: border-box;
   width: 100vw;

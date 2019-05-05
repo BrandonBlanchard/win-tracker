@@ -30,11 +30,12 @@ const gameRenderer = (game) => (
 
 const GamesList = (props) => {
     const { games } = props;
+
     console.log(games);
 
     return (
         <div className='games-list'>
-            <h2 className='games-list__header'> Games Played </h2>
+            <h2 className='games-list__header'> Games </h2>
             <table className="games-list__games-list">
                 {games.map(gameRenderer)}
             </table>
