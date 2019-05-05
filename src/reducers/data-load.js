@@ -1,6 +1,12 @@
 import has from 'lodash/has';
 
+const OPPONENT_NAME = 'opponent';
+const OPPONENT_CASTER = 'opponent caster';
 const OPPONENT_FACTION = "opponent faction";
+const OPPONENT_THEME = 'opponent theme';
+const OPPONENT_CONTROL_POINTS = 'opponent control points';
+const MY_CONTROL_POINTS = 'my control points';
+const WIN_CONDITION = 'win condition';
 
 const playerReducer = (acc, game) => {
     const playerDidWin = game.win === "TRUE";
@@ -61,12 +67,40 @@ const factionReducer = (acc, game) => {
     return acc;
 }
 
+
+const gamesMapper = (game) => {
+    const player1 = {
+        name: game.player,
+        caster: game.caster,
+        faction: game.faction,
+        theme: game.theme,
+        controlPoints: game[MY_CONTROL_POINTS],
+        win: game.win === "TRUE",
+    };
+
+    const player2 = {
+        name: game[OPPONENT_NAME],
+        caster: game[OPPONENT_CASTER],
+        faction: game[OPPONENT_FACTION],
+        theme: game[OPPONENT_THEME],
+        controlPoints: game[OPPONENT_CONTROL_POINTS],
+        win: game.win === "FALSE"
+    };
+
+    return {
+        winCondition: game[WIN_CONDITION],
+        player1,
+        player2
+    };
+}
+
 const dataLoadReducer = (prevState, action) => {
     console.log('data load reducer', prevState, action);
 
     return {
         players: [ ...Object.values(action.payload.reduce(playerReducer, {}))],
-        factions: [...Object.values(action.payload.reduce(factionReducer, {}))]
+        factions: [...Object.values(action.payload.reduce(factionReducer, {}))],
+        games: [...Object.values(action.payload.map(gamesMapper))]
     }
 };
 

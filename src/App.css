@@ -28,6 +28,7 @@ div, h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+  margin: 0 auto;
 }
 
 .content-header {
@@ -41,6 +42,7 @@ div, h1, h2, h3, h4, h5, h6 {
 .content {
   margin: 0 auto;
   width: 1280px;
+
   max-width: 100%;
   overflow-x: scroll;
 

@@ -3,9 +3,8 @@
 .meta-stats {
     position: relative;
     box-sizing: border-box;
-    width: 1200px;
-    max-width: 100%;
-
+    width: 100%;
+    margin: 0 auto;
     
     background-size: cover;
     display: flex;

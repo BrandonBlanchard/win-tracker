@@ -8,7 +8,8 @@ import 'react-pivottable/pivottable.css';
 import { WelcomeMat } from './components/welcome-mat/welcome-mat';
 import { dataLoad } from './actions/index';
 import { SectionMeta } from './components/section-meta';
-
+import { TabContainer } from './components/tab-container';
+import { GamesList } from './components/games-list';
 
 const dataSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6B-jLNFVOaHlagYjsClKUDGquAkZpCymnDQ60n5wOw-0pf8gRImDXKciW7FzLZbK4rZutfQjPfVSM/pub?output=csv';
 
@@ -49,6 +50,10 @@ class App extends Component {
     return (
       <div className='charts-container'>
         <SectionMeta {...this.props} />
+        <TabContainer tabNames={['Games', 'Players']}>
+            <GamesList games={this.props.data.games}></GamesList>
+            <div>TWO!!</div>
+        </TabContainer>
       </div>
     );
   }

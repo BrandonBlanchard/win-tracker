@@ -1,0 +1,124 @@
+.games-list {
+    list-style: none;
+    width: 100%;
+    max-width: 1200px;
+
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.games-list__header {
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+    color: #728041;
+}
+
+.games-list__games-list {
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.games-list__game {
+    width: 100%;
+    margin-bottom: 40px;  
+    box-sizing: border-box;
+}
+
+.games-list__game-data {
+    background-image: -webkit-linear-gradient(#728041, transparent 30px);
+    width: 100%;
+    border-radius: 13px;
+    margin-bottom: 20px;
+    border-spacing: 1px;
+    table-layout: fixed;
+}
+
+.games-list__player {   
+    border-radius: 12px;
+    width: 100%;   
+    padding: 15px 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.games-list__player:last-of-type > .games-list__player-name {
+    background-color: transparent;
+}
+
+.games-list__player > .games-list__stat--orange,
+.games-list__player > .games-list__stat {
+    background-color: #1c2532;  
+}
+
+.games-list__player > .games-list__stat--orange:first-of-type,
+.games-list__player > .games-list__stat:first-of-type {
+    border-radius: 12px 0 0 0;
+}
+
+.games-list__player > .games-list__stat--orange:last-of-type,
+.games-list__player > .games-list__stat:last-of-type {
+    border-radius: 0 12px 0 0;
+}
+
+.games-list__player > 
+.games-list__player-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #728041;
+    text-align: left;
+    display: flex;
+
+}
+
+.games-list__win-condition {
+    display: block;
+    height: 18px;
+    margin: 0 0 0 40px;
+
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1.4;
+
+    width: 100px;
+
+    border-radius: 12px;
+    border: 1px solid rgb(255, 127, 14);
+    color: rgb(255, 127, 14);
+}
+
+.games-list__control-points {
+    width: 20px;
+}
+
+.games-list__win-loss {
+    width: 24px;
+    float: left;
+    font-size: 14px;
+    line-height: 1.4;
+    color: rgb(255, 127, 14);
+}
+
+.games-list__label {
+    width: 100%;
+    font-size: 12px;
+    color: #728041;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.games-list__stat--orange,
+.games-list__stat {
+    font-size: 14px;
+    color: #728041;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 8px 12px;
+    text-overflow: ellipsis;
+}
+
+.games-list__stat--orange {
+    color: rgb(255, 127, 14);
+}

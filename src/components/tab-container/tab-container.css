@@ -1,0 +1,43 @@
+
+.tab-container {
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tab-container__tab-bar {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.tab-container__tab--active,
+.tab-container__tab {
+    padding: 8px 20px;
+    margin: 0 5px;
+
+    border-radius: 13px;
+    border: 1px solid #728041;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #728041;
+
+    cursor: pointer;
+}
+
+.tab-container__tab--active {   
+    color: rgb(255, 127, 14);
+}
+
+.tab-container__tab-content {
+    width: 100%;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: center;
+}
