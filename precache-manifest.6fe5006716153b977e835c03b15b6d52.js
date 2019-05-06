@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/win-tracker/static/css/2.d6032e97.chunk.css"
   },
   {
-    "revision": "432fe9f3aeaba7379cfa9120ef9c9fd1",
+    "revision": "fd0ef365e29aca849651d5d45f1a6e36",
     "url": "/win-tracker/index.html"
   }
 ];
