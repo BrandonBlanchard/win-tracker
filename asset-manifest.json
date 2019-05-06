@@ -1,5 +1,5 @@
 {
-  "main.css": "/win-tracker/static/css/main.64336595.chunk.css",
+  "main.css": "/win-tracker/static/css/main.e887b8b7.chunk.css",
   "main.js": "/win-tracker/static/js/main.73308ec4.chunk.js",
   "main.js.map": "/win-tracker/static/js/main.73308ec4.chunk.js.map",
   "runtime~main.js": "/win-tracker/static/js/runtime~main.befbb89c.js",
@@ -8,8 +8,8 @@
   "static/js/2.f8d8bc1c.chunk.js": "/win-tracker/static/js/2.f8d8bc1c.chunk.js",
   "static/js/2.f8d8bc1c.chunk.js.map": "/win-tracker/static/js/2.f8d8bc1c.chunk.js.map",
   "index.html": "/win-tracker/index.html",
-  "precache-manifest.d3e76f1c4b90f093da00ca4ffc3a109e.js": "/win-tracker/precache-manifest.d3e76f1c4b90f093da00ca4ffc3a109e.js",
+  "precache-manifest.3d0ad55e9656755f32b699bf566ac0a8.js": "/win-tracker/precache-manifest.3d0ad55e9656755f32b699bf566ac0a8.js",
   "service-worker.js": "/win-tracker/service-worker.js",
   "static/css/2.d6032e97.chunk.css.map": "/win-tracker/static/css/2.d6032e97.chunk.css.map",
-  "static/css/main.64336595.chunk.css.map": "/win-tracker/static/css/main.64336595.chunk.css.map"
+  "static/css/main.e887b8b7.chunk.css.map": "/win-tracker/static/css/main.e887b8b7.chunk.css.map"
 }
