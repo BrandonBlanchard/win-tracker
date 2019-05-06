@@ -58,13 +58,13 @@ export default (props) => {
 
   return (
     <div className='meta-stats'>
-      <ChartCard chartName="Faction Games" key={0}>
+      <ChartCard chartName="Faction Games">
         <PieChart data={factionChart} layout={layout} width={chartSize} height={chartSize} ></PieChart>
       </ChartCard>
 
       <MiniLeaderboard players={players}></MiniLeaderboard>
 
-      <ChartCard chartName="Player Wins" key={0}>
+      <ChartCard chartName="Player Wins" >
         <PieChart data={playerChart} layout={layout} width={chartSize} height={chartSize} ></PieChart>
       </ChartCard>
     </div>

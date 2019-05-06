@@ -10,7 +10,7 @@ const WIN_CONDITION = 'win condition';
 
 const playerReducer = (acc, game) => {
     const playerDidWin = game.win === "TRUE";
-    console.log(game[MY_CONTROL_POINTS], game[OPPONENT_CONTROL_POINTS])
+    
     // DRY ?
     if(has(acc, game.player)) {
         acc[game.player].games += 1;
@@ -42,6 +42,14 @@ const playerReducer = (acc, game) => {
 
     return acc;
 }
+
+const playerFilter = (player) => player.player !== 'opponent';
+
+const playerSorter = (playerA, playerB) => {
+    if(playerA.games > playerB.games) { return -1; }
+    if(playerA.games < playerB.games) { return 1; }
+    return 0;
+};
 
 const factionReducer = (acc, game) => {
     const factionDidWin = game.win === "TRUE";
@@ -106,7 +114,7 @@ const dataLoadReducer = (prevState, action) => {
     const data = action.payload.reverse();
 
     return {
-        players: [ ...Object.values(data.reduce(playerReducer, {})) ],
+        players: [ ...Object.values(data.reduce(playerReducer, {})).filter(playerFilter).sort(playerSorter) ],
         factions: [ ...Object.values(data.reduce(factionReducer, {})) ],
         games: [ ...Object.values(data.map(gamesMapper)) ]
     }

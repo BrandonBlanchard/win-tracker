@@ -1,5 +1,3 @@
-import { stringify } from "querystring";
-
 
 const fetchData = (url, dataReadyCB) => {
      return fetch(url).then(data => {

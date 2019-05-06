@@ -4,7 +4,8 @@ import './tab-container.css';
 
 const tabMapper = (name, thisIndex, tabIndex, setTabIndex) => (
     <div className={ thisIndex === tabIndex ? 'tab-container__tab--active' : 'tab-container__tab' } 
-         onClick={ () => setTabIndex(thisIndex)}>
+         onClick={ () => setTabIndex(thisIndex)}
+         key={thisIndex}>
     { name }</div>
 );
 

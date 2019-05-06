@@ -11,6 +11,7 @@ import { SectionMeta } from './components/section-meta';
 import { TabContainer } from './components/tab-container';
 import { GamesList } from './components/games-list';
 import { PlayersList } from './components/players-list';
+import { EnterGame } from './components/enter-game';
 
 const dataSource = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQ6B-jLNFVOaHlagYjsClKUDGquAkZpCymnDQ60n5wOw-0pf8gRImDXKciW7FzLZbK4rZutfQjPfVSM/pub?output=csv';
 
@@ -67,6 +68,7 @@ class App extends Component {
     console.log(this.props)
     return (
       <div className="app">
+        <EnterGame/>
         <WelcomeMat/>
         {this.props.data.players.length > 0 && this.renderOnReady()}
       </div>

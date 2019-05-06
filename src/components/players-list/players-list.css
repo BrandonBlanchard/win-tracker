@@ -5,7 +5,7 @@
     max-width: 1200px;
 
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .players-list__header {

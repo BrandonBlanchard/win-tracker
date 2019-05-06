@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './mini-leaderboard.css';
 
 
@@ -12,7 +12,7 @@ const byWins = (a, b) => {
 };
 
 
-const onWins = (player) => player.wins > 2 && player.player != 'Some rando'; 
+const onWins = (player) => player.wins > 2 && player.player !== 'Some rando' && player.player !== 'opponent'; 
 
 
 const extractPlayers = (players) => {
@@ -49,8 +49,8 @@ export const MiniLeaderboard = (props) => {
                 <p className='mini-leaderboard__leader-faction'>{ leader.faction }</p>
                 <div className='mini-leaderboard__leader-stats'>
                     {
-                        leaderStats.map(set => (
-                            <div className='mini-leaderboard__leader-stat'>
+                        leaderStats.map((set, index) => (
+                            <div className='mini-leaderboard__leader-stat' key={`stats-${index}`}>
                                 <p className='leader-stat__label'>{set.label}</p>
                                 <p className='leader-stat__value'>{set.stat}</p>
                             </div>
@@ -63,7 +63,7 @@ export const MiniLeaderboard = (props) => {
             </li>
             {
                 rabble.map( ({ player, faction, wins, games}, i) => (
-                    <li className='mini-leaderboard__player'>
+                    <li className='mini-leaderboard__player' key={`player-${i}`}>
                         <div className='mini-leaderboard__player-dot'> { player } </div>
                         <div className='mini-leaderboard__player-faction'>{ faction }</div>
                         <div className="mini-leaderboard__player-wins">{numberStringMap[i + 2]}</div>

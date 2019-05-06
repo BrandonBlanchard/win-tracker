@@ -1,0 +1,136 @@
+
+
+.enter-game {
+    transition: 400ms ease-in-out background-color;
+    
+    position: fixed;
+    box-sizing: border-box;
+
+    border-radius: 30px;
+    
+    z-index: 800;
+}
+
+.enter-game--button {
+    width: 60px;
+    height: 60px;
+    
+    bottom: 20px;
+    right: 20px;
+    background-image: #1c2532;
+    border: 1px solid rgb(255, 127, 14);
+}
+
+.enter-game--form {
+    bottom: 0;
+    right: 0;
+    
+    width: 100%;
+    height: 100%;
+
+    padding: 15px;
+
+    background-color: transparent;
+
+    box-sizing: border-box;
+    overflow: hidden;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: #1c2532;
+    border-radius: 0;
+}
+
+.enter-game--button .enter-game__game-entry-content {
+    display: none;
+}
+
+.enter-game__game-entry-content {
+    padding: 15px;
+    background-color: #1c2532;
+    border: 1px solid rgb(255, 127, 14);
+    border-radius: 13px 13px 0 13px;
+
+    width: 600px;
+    max-width: 100%;
+    height: 90vh;
+    position: relative;
+}
+
+.enter-game__game-entry {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.enter-game__close {
+    position: absolute;
+    bottom: -30px;
+    left: 75%;
+
+    font-size: 14px;
+
+    width: calc(25% + 1px); 
+    box-sizing: border-box;
+    height: 30px;
+    
+    padding: 3px;
+    cursor: pointer;
+    
+    background-color: #1c2532;
+    color:rgb(255, 127, 14);
+    
+    border: 1px solid rgb(255, 127, 14);
+    border-radius: 0 0 13px 13px;
+    border-width: 0 1px 1px 1px;
+
+    text-align: center;
+
+    z-index: 850;
+    outline: none;
+}
+
+.enter-game__close:after,
+.enter-game__close:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: -14px;
+
+    width: 13px;
+    height: 17px;
+}
+
+.enter-game__close:after {
+    border-radius:  0 13px 0 0;
+    border-top: 1px solid rgb(255, 127, 14);
+    border-right: 1px solid rgb(255, 127, 14)   ;
+    height: 17px;
+}
+
+.enter-game__close:before {
+    top: -4px;
+    left: -13px;
+    background-color: #1c2532;
+}
+
+.enter-game--form .enter-game__open {
+    display: none;
+}
+
+.enter-game__open {
+    color: rgb(255, 127, 14);
+    font-size: 25px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+}
+
