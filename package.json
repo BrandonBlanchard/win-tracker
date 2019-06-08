@@ -1,7 +1,7 @@
 {
   "name": "win-tracker",
   "version": "0.1.0",
-  "homepage": "https://brandonblanchard.gitub.io/win-tracker",
+  "homepage": "https://meta-tracker-web-app-stage.azurewebsites.net/",
   "private": true,
   "dependencies": {
     "gh-pages": "^2.0.1",
